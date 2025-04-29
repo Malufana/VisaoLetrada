@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "778820470736",
+    "project_id": "visaoletrada",
+    "storage_bucket": "visaoletrada.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:778820470736:android:ac68518b62c06abece9bd5",
+        "android_client_info": {
+          "package_name": "com.example.visaoletrada"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXEh_BsvgmQ0Cooj7DtZ35Tj5UdKOEfIY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
