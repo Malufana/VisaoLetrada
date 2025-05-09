@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:visaoletrada/home.dart';
+import 'package:visaoletrada/navigation.dart';
 
 TextEditingController _user = TextEditingController();
 TextEditingController _pass = TextEditingController();
@@ -36,9 +37,9 @@ class _LoginPageState extends State<LoginPage> {
       body: Container(
         decoration: const BoxDecoration(
           gradient: LinearGradient(
-            colors: [Color(0x005de0e6), Color(0x00004aad)],
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
+            colors: [Color(0xFF5de0e6), Color(0xFF004aad)],
+            begin: Alignment.centerLeft,
+            end: Alignment.centerRight,
           ),
         ),
         child: Center(
@@ -63,7 +64,7 @@ class _LoginPageState extends State<LoginPage> {
                   decoration: InputDecoration(
                     hintText: "USER",
                     border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10)
+                      borderRadius: BorderRadius.circular(30)
                     ),
                     filled: true,
                     fillColor: Colors.grey[200]
@@ -73,9 +74,9 @@ class _LoginPageState extends State<LoginPage> {
                 SizedBox(height: 15),
                 TextField(
                   decoration: InputDecoration(
-                    hintText: "PASS",
+                    hintText: "PASSWORD",
                     border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10)
+                      borderRadius: BorderRadius.circular(30)
                     ),
                     filled: true,
                     fillColor: Colors.grey[200]
@@ -85,18 +86,19 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                 SizedBox(height: 20),
                 SizedBox(
-                  width: double.infinity,
+                  width: 150,
                   child: ElevatedButton(style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.transparent,
+                    backgroundColor: Colors.white,
                     padding: EdgeInsets.symmetric(vertical: 15),
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10)
+                      borderRadius: BorderRadius.circular(30),
+                      side: const BorderSide(color: Colors.black, width: 1)
                     )
                   ),
                   onPressed: (){
                     if(Logar()){
                       Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => TelaHome())
+                        MaterialPageRoute(builder: (context) => NavApp())
                       );
                     }
                   }, child: Row(
@@ -104,7 +106,7 @@ class _LoginPageState extends State<LoginPage> {
                     children: [
                       Text("Entrar", style: TextStyle(
                         fontSize: 18,
-                        color: Colors.white
+                        color: Colors.black
                       ))
                     ],
                   ),
