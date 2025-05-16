@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:visaoletrada/home.dart';
 import 'package:visaoletrada/listaLivro.dart';
+import 'package:visaoletrada/sobre.dart';
 
 class NavApp extends StatefulWidget {
   const NavApp({super.key});
@@ -18,7 +19,8 @@ class _NavAppState extends State<NavApp> {
 
   static final List<Widget> _widgetOptions = <Widget>[
     TelaHome(),
-    ListaLivro()
+    ListaLivro(),
+    Sobre()
   ];
 
   void showItemTrap(int index){
@@ -78,6 +80,10 @@ class _NavAppState extends State<NavApp> {
             BottomNavigationBarItem(
               icon: Icon(Icons.book),
               label: "Leituras"
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.account_box_rounded),
+              label: "Sobre"
             )
           ],
         ),
