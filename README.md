@@ -32,6 +32,10 @@ Aplicativo Flutter onde o usuário pode salvar trechos que mais amou de seus liv
 ---
 
 ## 📈 Melhorias Futuras
+- Salvar em arquivo externo
+- Login com autenticação externa
 
 ---
+## 💯 Desenvolvedor
+- Ana Maluf
 
