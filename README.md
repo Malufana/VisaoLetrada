@@ -39,12 +39,20 @@ O aplicativo foi concebido para ser fácil, intuitivo e acessível, para que qua
 ## 🖼 Capturas de Tela
 
 ### Tela de Login
+![Tela de Login](imagens/login.jpg)
 ### Tela de Home
+![Tela de Home](imagens/home.jpg)
 ### Lista de Livros
+![Lista de Livros](imagens/listaLivros1.jpg)
+![Lista de Livros](imagens/listaLivros2.jpg)
 ### Adição de Livros
+![Adição de Livros](imagens/addLivro.jpg)
 ### Trechos Salvos
+![Lista de Trechos](imagens/trechos.jpg)
 ### Adição de Trechos
+![Adição de Trechos](imagens/addTrechos.jpg)
 ### Tela Sobre
+![Tela Sobre](imagens/sobre.jpg)
 ---
 
 ## 📈 Melhorias Futuras
