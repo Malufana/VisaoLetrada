@@ -26,7 +26,11 @@ Aplicativo Flutter onde o usuário pode salvar trechos que mais amou de seus liv
 - Trechos - Tela com os trechos do livros podendo adicionar/excluir/alterar os seus trechos
 
 ---
+## ❓ Motivo da Aplicação
+A ideia do projeto surgiu como uma alternativa para os leitores que gostariam de ter acesso aos trechos favoritos dos seus livros lidos, aos leitores de livros físicos, o marca texto e post-it são uma outra alternativa, porém, somente para o momento que de fato estão lendo o livro. Aos leitores digitais, o kindle, já tem uma ferramenta para marcação de trechos, mas infelizmente, ele fica exclusivamente no kindle. Visto esses cenários, o Visão Letrada, veio para que os usuarios tenham em mãos seus trechos sempre que quiserem.
 
+Ele foi pensado para ser uma aplicação facil e intuitiva, para que todos possam utilizar!
+---
 ## 🖼 Capturas de Tela
 
 ---
