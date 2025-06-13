@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'listaLivro.dart';
 
 class TelaGet extends StatefulWidget {
   const TelaGet({super.key});
@@ -38,10 +39,31 @@ class _TelaGetState extends State<TelaGet> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Minha página de get"));
       body: Center(
-        child: conselhos == null ? CircularProgressIndicator() : Text(conselhos!)
-      );
+        child: conselhos == null ? 
+          CircularProgressIndicator() 
+          : GestureDetector(
+            onTap: () {
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => const ListaLivro()),
+              );
+            },
+            child: Container(
+              padding: const EdgeInsets.all(24),
+              margin: const EdgeInsets.symmetric(horizontal: 16),
+              decoration: BoxDecoration(
+                color: Colors.blueAccent,
+                borderRadius: BorderRadius.circular(16),
+              ),
+              child: Text(
+                conselhos!,
+                textAlign: TextAlign.center,
+                style: const TextStyle(color: Colors.white, fontSize: 22),
+              ),
+            )
+          )
+      )
     );
   }
 }

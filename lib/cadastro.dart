@@ -39,23 +39,23 @@ class _CadastroState extends State<Cadastro> {
                   onPressed: () async {
                     final message = await AuthService().registration(email: _email.text, password: _senha.text);
 
-                    if(message.contains("Success")){
+                    if(message!.contains("Success")){
                       Navigator.push(context, MaterialPageRoute(builder: (context) => TelaHome()));
                     }
                     ScaffoldMessenger.of(context).showSnackBar(
                       SnackBar(content: Text(message))
-                    )
+                    );
+                  },child: Text("Cadastrar")
+                ),
+                ElevatedButton(
+                  onPressed: (){
+                    _email.text = "";
+                    _senha.text = "";
                   }, 
-                  child: Text("Cadastrar")),
-                  ElevatedButton(
-                    onPressed: (){
-                      _email.text = "";
-                      _senha.text = "";
-                    }, 
-                    child: Text("Limpar credenciais"))
+                  child: Text("Limpar credenciais")
                 )
               ],
-            )
+            ),
           ],
         ),
       ),

@@ -3,6 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:visaoletrada/home.dart';
 import 'package:visaoletrada/navigation.dart';
+import 'package:visaoletrada/cadastro.dart';
+import 'package:visaoletrada/auth.dart';
 
 TextEditingController _user = TextEditingController();
 TextEditingController _pass = TextEditingController();
@@ -95,12 +97,12 @@ class _LoginPageState extends State<LoginPage> {
                       side: const BorderSide(color: Colors.black, width: 1)
                     )
                   ),
-                  onPressed: (){
-                    if(Logar()){
-                      Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => NavApp())
-                      );
+                  onPressed: () async{
+                    final message = await AuthService.login(email: _email.text, password: _senha.text);
+                    if(massage!.contains("Success")){
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => TelaHome()));
                     }
+                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(message!)));
                   }, child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -109,8 +111,23 @@ class _LoginPageState extends State<LoginPage> {
                         color: Colors.black
                       ))
                     ],
+                    
                   ),
                   ),
+                ),
+                const SizedBox(height: 10),
+
+                TextButton(
+                  onPressed: (){
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Cadastro()),
+                    );
+                  }, 
+                  child: const Text(
+                    "Não tem conta? Cadastre-se aqui",
+                    style: TextStyle(color: Colors.black87, fontSize: 14),
+                  )
                 )
               ],
             ),  

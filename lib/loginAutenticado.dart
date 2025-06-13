@@ -43,7 +43,7 @@ class _LoginAutenticadoState extends State<LoginAutenticado> {
                   if(massage!.contains("Success")){
                     Navigator.push(context, MaterialPageRoute(builder: (context) => TelaHome()));
                   }
-                  ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(message)))
+                  ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(message!)));
                 }, child: Text("LOGIN")
               )
             ])
